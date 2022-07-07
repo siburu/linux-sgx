@@ -37,4 +37,4 @@ docker volume create --driver local --opt type=tmpfs --opt device=tmpfs --opt o=
 
 # If you use the Legacy Launch Control driver, replace /dev/sgx/enclave with /dev/isgx, and remove
 # --device=/dev/sgx/provision
-docker run --env http_proxy --env https_proxy --device=/dev/sgx/enclave --device=/dev/sgx/provision -v /dev/log:/dev/log -v aesmd-socket:/var/run/aesmd -it sgx_aesm
+docker run --env http_proxy --env https_proxy --device=/dev/isgx -v /dev/log:/dev/log -v aesmd-socket:/var/run/aesmd -it sgx_aesm
